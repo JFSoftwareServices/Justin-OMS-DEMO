@@ -36,8 +36,34 @@ Payload: {
 ######3. Get All Products : http://localhost:8080/api/v1/products
 Method: GET
 Payload: Not required
+
 ######4. Delete Product (soft delete) : http://localhost:8080/api/v1/product/{id}
 Method: DELETE 
 Payload: Not required
 
-   
+##Order flow will be demonstrated without any testing as the above example covers the required skill-set 
+
+1. DDD - Order and Order Line domain object without any TDD and BDD, order total calculation 
+Note: Order total calculation is order domain responsibility hence it is delegated to this domain class  
+2. Repository and Service to show case the required order range flow search and relationship mapping
+3. End to end manual testing using postman
+
+### End-point testing from postman
+######1. Create Order : http://localhost:8080/api/v1/order
+Method: POST
+Payload: {
+             "buyerEmailId" : "justin@justin.com",
+             "orderLines" : [{ 
+             "product" : {
+                 "id": 1,
+                 "name": "Justinnew1",
+                 "price": 10.00        
+             }
+             }
+         ]
+         }
+
+######2. Get All Orders for past X days (due to timeline it is simplified) : http://localhost:8080/api/v1/orders/5
+Note: In this example the 5 is mapped to X and current date - X days order can be fetched using this API 
+Method: GET
+Payload: Not required
