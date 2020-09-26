@@ -1,9 +1,9 @@
 # Justin-OMS-DEMO
 
 ###Project setup
-1. The base project is created using springboot starter kit Java 1.8 and Maven 
-2. Database is H2 and please refer the application properties where you shall see spring.datasource.url=jdbc:h2:file:C:/DEMO/oms
-3. You file system must have permission to create DB file in C:/DEMO/oms if not please change the location accordingly 
+1. The base project is created using springboot, Java 1.8 and Maven (from starter kit https://start.spring.io/) 
+2. Database is H2, please refer to the application properties where you shall see spring.datasource.url=${DB_STORAGE:jdbc:h2:file:C:/DEMO/oms}
+3. Your file system must have permission to create DB file in C:/DEMO/oms if not please change the location accordingly by referring below, 
 
 ### Running MVN command and changing the DB_STORAGE location 
 1. Take the source code and run the mvn clean install (this should be run in C:\JUSDEMO\Justin-OMS-DEMO\oms),
