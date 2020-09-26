@@ -5,7 +5,14 @@
 2. Database is H2 and please refer the application properties where you shall see spring.datasource.url=jdbc:h2:file:C:/DEMO/oms
 3. You file system must have permission to create DB file in C:/DEMO/oms if not please change the location accordingly 
 
-Note: You need to run (mvn build, mvn spring-boot:run or run from intelliJ / eclipse) the OmsApplication and then access the H2 database access http:localhost:8080/h2
+### Running MVN command and changing the DB_STORAGE location 
+1. Take the source code and run the mvn clean install (this should be run in C:\JUSDEMO\Justin-OMS-DEMO\oms),
+2. Note: DB_STORAGE: The same can be modified by exporting new value into the environment for DB_STORAGE 
+3. Inside the oms folder run the mvn spring-boot:run after mvn clean install
+4. Access the H2 database access http//:localhost:8080/h2
+
+Note: You need to run (mvn install, mvn spring-boot:run) or run the OmsApplication from intelliJ / eclipse  
+In application properties file you shall change the same in case you don't want to add into environment 
 spring.datasource.url=${DB_STORAGE:jdbc:h2:file:C:/DEMO/oms}
 username=user
 password=password
