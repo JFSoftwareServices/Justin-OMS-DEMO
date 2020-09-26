@@ -5,7 +5,8 @@
 2. Database is H2 and please refer the application properties where you shall see spring.datasource.url=jdbc:h2:file:C:/DEMO/oms
 3. You file system must have permission to create DB file in C:/DEMO/oms if not please change the location accordingly 
 
-Note: You need to run the OmsApplication and then access the H2 database access http:localhost:8080/h2
+Note: You need to run (mvn build, mvn spring-boot:run or run from intelliJ / eclipse) the OmsApplication and then access the H2 database access http:localhost:8080/h2
+
 username=user
 password=password
 
